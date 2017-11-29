@@ -34,9 +34,9 @@ RegisterServerEvent('gc:openIdentity')
 AddEventHandler('gc:openIdentity',function(other)
     getIdentity(source, function(data)
         local gender
-        if data.sex == "male" then
-            gender = "h"
-        elseif data.g == "female" then
+        if data.sex == "m" or data.sex == "M" then
+            gender = "m"
+        elseif data.sex == "f" or data.sex == "F" then
             gender = "f"
         end 
         TriggerClientEvent('gc:showItentity', tonumber(other), {
@@ -55,12 +55,13 @@ RegisterServerEvent('gc:openMeIdentity')
 AddEventHandler('gc:openMeIdentity',function()
     getIdentity(source, function(data)
         local gender
-        if data.sex == "male" then
-            gender = "h"
-        elseif data.g == "female" then
+        if data.sex == "m" or data.sex == "M" then
+            gender = "m"
+        elseif data.sex == "f" or data.sex == "F" then
             gender = "f"
         end
-        TriggerClientEvent('gc:showItentity', source, {
+        TriggerClientEvent('gc:showItentity', source,
+		{
             nom = data.lastname,
             prenom = data.firstname,
             dateNaissance = tostring(data.dateofbirth),

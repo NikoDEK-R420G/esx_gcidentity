@@ -29,6 +29,9 @@ Citizen.CreateThread(function()
         end
       end
     end
+	if IsControlPressed(1,  38) then
+      TriggerServerEvent('gc:openMeIdentity')
+    end
   end
 end)
  
