@@ -53,4 +53,4 @@ Citizen.CreateThread(function()
 end)
 ```
 
-![alt text](https://image.prntscr.com/image/CiKwlfZSQSWdhHcnw1x2EQ.png)
+![alt text](https://cdn.discordapp.com/attachments/324166954552262666/385472495873949697/unknown.png)
